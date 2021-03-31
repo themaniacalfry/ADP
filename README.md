@@ -5,7 +5,7 @@ ADP integration for Bridge
 1. Ensure you have an account with Bridge by Smartsheet
 2. Bridge extensions run on **Node.JS** `v12.15.0` on **Alpine Linux** so ensure your node development environment matches this setup. We recommend installing Node.JS via [Node Version Manager (NVM)](https://github.com/creationix/nvm).
 3. Install and Authorize [Converse.AI CLI tool](https://www.npmjs.com/package/converse-cli).
-4. Create a file `test/lib/registrationData.js` that contains the code below:
+4. Create a file `test/lib/registrationData.js` that contains the code below and set the values for `client_id`, `client_secret`, `cert`, and `key` from the information provided by ADP.
 
 ```
 module.exports = {
