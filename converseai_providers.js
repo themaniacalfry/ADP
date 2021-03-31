@@ -8,37 +8,27 @@
 'use strict';
 
 const Status                    = require('@converseai/plugins-sdk').Status;
-const RegistrationDataResponse  = require('@converseai/plugins-sdk').Payloads.RegistrationDataResponse;
 const OAuth2HandleCodeResponse  = require('@converseai/plugins-sdk').Payloads.OAuth2HandleCodeResponse;
 const adp = require('./lib/adp');
 const util = require('./lib/util');
 
-// const onOAuthHandleCode = async (app, token) => {
-//   const response = new OAuth2HandleCodeResponse();
-
-//   response.setExpiresIn(token.expires_in);
-//   response.setAccessToken(token.access_token);
-  
-//   return app.send(Status.SUCCESS, response);
-// }
-
+// When a user saves the resgistration in Bridge, the onProviderRegister function is called.
 const onProviderRegister = async (app, body) => {
   const response = new OAuth2HandleCodeResponse();
 
   const registrationData = body.payload.registrationData;
 
+  // This function will make the POST API call to the token endpont to obtain a token.
   const res = await adp.auth(registrationData.app)
     .catch(err => {
-      console.error(err);
       return util.handleError(app, err);
     });
 
-  // console.log(res);
-  // await onOAuthHandleCode(app, res);
-
+  // The token and the expiration time will be saved.
   response.setExpiresIn(res.expires_in);
   response.setAccessToken(res.access_token);
 
+  // Sends the token and expiration back to the app.
   return app.send(Status.SUCCESS, response);
 }
 

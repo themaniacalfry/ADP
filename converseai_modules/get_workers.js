@@ -14,11 +14,12 @@ const adp = require('../lib/adp');
 const util = require('../lib/util');
 
 module.exports = async (app, body) => {
+  // Data contains the client_id, client_secret, cert, and key.
   const data = body.payload.registrationData.app;
 
+  // Obtains an API Token.
   const auth = await adp.auth(data)
   .catch(err => {
-    console.error(err);
     return util.handleError(app, err);
   });
 
@@ -28,35 +29,43 @@ module.exports = async (app, body) => {
 
   const response = new ModuleResponse();
 
-  let workersArray;
+  // API call to ADP to get the first page of the works. This is use to calculate how many additional API calls are needed.
+  const res = await adp.getWorkers(auth, data);
 
-  const workers = await adp.getWorkers(auth, data);
+  // Creates an Array based on the total amount of pages from the first request.
+  const pages = [...Array(Math.ceil(res.meta.totalNumber / 100)).keys()];
 
-  workersArray = [].concat(workers.workers);
-
-  const pages = [...Array(Math.ceil(workers.meta.totalNumber / 100)).keys()];
-
+  // For each page in the pages array, an additional getWorkers request is made as a promise to obtain all results.
   const promises = pages.map(i => {
     return adp.getWorkers(auth, data, 100 * (i + 1))
-  })
+  });
 
+  // All results are then processes and stored as allResponses.
   const allRespones = await Promise.all(promises);
 
-  const allWorkers = [].concat(workersArray, allRespones.map(o => o.workers).flat());
+  // The workers is a concatination of the first response and the rest of the promised workers responses. 
+  const workers = [].concat(res.workers, allRespones.map(o => o.workers).flat());
 
+  // A userMap is created to store all workers objects with a referenceable ID using their ADP ID.
   const userMap = new Map();
 
-  for (const worker of allWorkers) {
+  // Iterates through each worker in the workers array.
+  for (const worker of workers) {
+    // If the worker is not null.
     if (worker) {
+      // If the worker contains an email address.
       if (worker.businessCommunication.emails) {
+        // Sets the worker object with the ADP ID as the key.
         userMap.set(worker.workerID.idValue, worker.businessCommunication.emails[0].emailUri);
       }
     }
   }
 
-  const result = allWorkers.filter(i => {
+  // Filters out all null values.
+  const result = workers.filter(i => {
     return i != null;
   }).map(worker => {
+    // If the user has a manager that they report to, exchange the ADP ID for an email address.
     if (worker.workAssignments && worker.workAssignments[0] && worker.workAssignments[0].reportsTo && worker.workAssignments[0].reportsTo[0]) {
       worker.workAssignments[0].reportsTo[0].workerID.emailUri = userMap.get(worker.workAssignments[0].reportsTo[0].workerID.idValue);
     }
@@ -64,7 +73,9 @@ module.exports = async (app, body) => {
     return worker;
   });
 
+  // Sets the result for Bridge to use in the workflow.
   response.setValue({ result });
 
+  // Sends the response back to Bridge and ends the script.
   return app.send(Status.SUCCESS, response);
 };

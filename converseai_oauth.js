@@ -12,15 +12,18 @@ const OAuth2HandleCodeResponse  = require('@converseai/plugins-sdk').Payloads.OA
 const adp = require('./lib/adp');
 const util = require('./lib/util');
 
+// When a users click Connect in the registration page in Bridge it wil call the onOAuthHandleCode function.
 const onOAuthHandleCode = async (app, token) => {
   const response = new OAuth2HandleCodeResponse();
 
+  // This will set the token and expiration values.
   response.setExpiresIn(token.expires_in);
   response.setAccessToken(token.access_token);
 
   return app.send(Status.SUCCESS, response);
 }
 
+// Does nothing but is needed for the app to not fail.
 const onOAuthStart = async (app) => {
   return app.send(Status.SUCCESS);
 }
@@ -33,9 +36,9 @@ const onOAuthRenewToken = async (app, body) => {
 
   const registrationData = body.payload.registrationData;
 
+  // Requests a new token when the expiration time is close to expiring.
   const res = await adp.auth(registrationData.app)
     .catch(err => {
-      console.error(err);
       return util.handleError(app, err);
     });
 
