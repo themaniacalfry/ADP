@@ -1,0 +1,72 @@
+{
+  "name": "adp",
+  "displayName": "ADP",
+  "description": "Integration with ADP API.",
+  "category": "",
+  "documentLink": "",
+  "needsOAuth": true,
+  "uiSpec": {
+    "providerTabs": [
+      {
+        "type": "SETTINGS",
+        "text": "SETUP",
+        "enable": "hasAgreed || isRegistered",
+        "params": [
+          "app"
+        ]
+      }
+    ]
+  },
+  "providerData": [
+    {
+      "param": "app",
+      "displayName": "Connected App",
+      "description": "The details of the connected app to be used for authentication.",
+      "type": "PARAM",
+      "optional": false,
+      "valueParams": [
+        {
+          "param": "client_id",
+          "displayName": "Client Id",
+          "description": "The client id of the connected app",
+          "type": "STRING",
+          "optional": false
+        },
+        {
+          "param": "client_secret",
+          "displayName": "Client Secret",
+          "description": "The client secret of the connected app",
+          "type": "PASSWORD",
+          "optional": false
+        },
+        {
+          "param": "cert",
+          "displayName": "Cert",
+          "description": "The signed CSR from ADP. Often returned as a .PEM file.",
+          "type": "TEXT",
+          "hideExpression": "model.cert.value !== undefined",
+          "optional": false
+        },
+        {
+          "param": "key",
+          "displayName": "Key",
+          "description": "The key file generated from the CSR process.",
+          "type": "TEXT",
+          "hideExpression": "model.key.value !== undefined",
+          "optional": false
+        }
+      ]
+    }
+  ],
+  "module": [
+    {
+      "id": "get_workers",
+      "name": "Get Workers",
+      "description": "Get all workers in your ADP account.",
+      "hasReturn": true,
+      "param": []
+    }
+  ],
+  "webhooks": [],
+  "hasOAuth": true
+}

@@ -1,0 +1,19 @@
+{
+  "name": "adp",
+  "description": "Integration with ADP API.",
+  "main": "plugin.js",
+  "scripts": {
+    "test": "mocha test/plugin-test.js 'test/**/*-test.js' --timeout 20000"
+  },
+  "dependencies": {
+    "@converseai/plugins-sdk": "latest",
+    "axios": "^0.21.1"
+  },
+  "devDependencies": {
+    "body-parser": "1.18.2",
+    "chai": "4.1.2",
+    "express": "4.16.1",
+    "mocha": "^8.3.2",
+    "supertest": "3.0.0"
+  }
+}
