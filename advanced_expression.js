@@ -70,7 +70,7 @@ for (const worker of workers) {
           location = worker.workAssignments[0].homeWorkLocation.address.cityName || null;
       }
       
-      seniorityDate = worker.workAssignments[0].seniorityDate || null;
+      seniorityDate = worker.workAssignments[0].seniorityDate || worker.workerDates.originalHireDate || null;
 
       if (reportsTo = worker.workAssignments[0].reportsTo && worker.workAssignments[0].reportsTo.length > 0) {
           reportsTo = worker.workAssignments[0].reportsTo[0].workerID.emailUri || null;

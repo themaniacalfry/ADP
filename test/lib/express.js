@@ -12,7 +12,7 @@
 
 const express     = require('express');
 const bodyParser  = require('body-parser');
-const adp  = require('../../').mbfdemo_adp;
+const adp  = require('../../').gexproservices_adp;
 
 var app = express();
 app.use(bodyParser.json({ 
