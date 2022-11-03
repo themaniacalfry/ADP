@@ -1,0 +1,786 @@
+➤ extension-scripts: Setting TTY loglevel to info
+➤ extension-scripts: {
+    _: [
+      'deploy'
+    ],
+    specFile: 'extension.json',
+    'spec-file': 'extension.json',
+    exclude: [
+      '**/.*',
+      '**/*.log',
+      '**/*.{spec,test}.{js,ts}',
+      'src/**',
+      'node_modules/**',
+      '{test,tests,mock,mocks,__test__,__tests__,__mock__,__mocks__}/**'
+    ],
+    loglevel: 'info',
+    l: 'info',
+    debug: undefined,
+    d: undefined,
+    alias: 'gexpro',
+    src: 'src',
+    out: 'lib',
+    clean: true,
+    include: '**/**',
+    symlinks: false,
+    build: true,
+    '$0': 'extension-scripts'
+  }
+➤ Version 0.1.2
+➤ Account alias: gexpro
+➤ accountService: Preferences will be stored at /Users/tfry/Library/Preferences/com.smartsheet.bridge.extension-scripts/config.pref
+➤ Account url: https://gexproservices.bridge.smartsheet.com
+➤ Account key: ********************************29E8
+➤ ┌ Reading configuration
+➤ │ buildService: src src
+➤ │ buildService: out lib
+➤ │ buildService: options {
+      include: '**/**',
+      exclude: [
+        '**/.*',
+        '**/*.log',
+        '**/*.{spec,test}.{js,ts}',
+        'src/**',
+        'node_modules/**',
+        '{test,tests,mock,mocks,__test__,__tests__,__mock__,__mocks__}/**'
+      ],
+      clean: true
+    }
+➤ │ Found src directory /Users/tfry/GitLab/bridgeExtensions/ADP/src
+➤ │ Found out directory /Users/tfry/GitLab/bridgeExtensions/ADP/lib
+➤ │ buildService: Include **/**
+➤ │ buildService: Exclude 
+      - **/.*
+      - **/*.log
+      - **/*.{spec,test}.{js,ts}
+      - src/**
+      - node_modules/**
+      - {test,tests,mock,mocks,__test__,__tests__,__mock__,__mocks__}/**
+➤ └ Completed in 0.0s
+➤ ┌ Cleaning `out` folder
+➤ └ Completed in 0.0s
+➤ buildService: allFiles [
+    'index.ts',
+    'lib/adp.ts',
+    'modules/getWorkers.ts',
+    'settings.ts'
+  ]
+➤ ┌ Building 4 files
+➤ │ Building index.ts
+➤ │ buildService: Transforming index /Users/tfry/GitLab/bridgeExtensions/ADP/src/index.ts
+➤ │ buildService: Writing index /Users/tfry/GitLab/bridgeExtensions/ADP/lib/index.js
+➤ │ Building lib/adp.ts
+➤ │ buildService: Transforming adp /Users/tfry/GitLab/bridgeExtensions/ADP/src/lib/adp.ts
+➤ │ buildService: Writing adp /Users/tfry/GitLab/bridgeExtensions/ADP/lib/lib/adp.js
+➤ │ Building modules/getWorkers.ts
+➤ │ buildService: Transforming getWorkers /Users/tfry/GitLab/bridgeExtensions/ADP/src/modules/getWorkers.ts
+➤ │ buildService: Writing getWorkers /Users/tfry/GitLab/bridgeExtensions/ADP/lib/modules/getWorkers.js
+➤ │ Building settings.ts
+➤ │ buildService: Transforming settings /Users/tfry/GitLab/bridgeExtensions/ADP/src/settings.ts
+➤ │ buildService: Writing settings /Users/tfry/GitLab/bridgeExtensions/ADP/lib/settings.js
+➤ └ Completed in 0.17s
+➤ deployService: options {
+    include: '**/**',
+    exclude: [
+      '**/.*',
+      '**/*.log',
+      '**/*.{spec,test}.{js,ts}',
+      'src/**',
+      'node_modules/**',
+      '{test,tests,mock,mocks,__test__,__tests__,__mock__,__mocks__}/**'
+    ],
+    symlinks: false,
+    specFile: 'extension.json',
+    env: undefined
+  }
+➤ ┌ Authenticating platform
+➤ │ API Request https://gexproservices.bridge.smartsheet.com/api/platform
+➤ │ API Request: Headers {
+      common: {
+        Accept: 'application/json, text/plain, */*'
+      },
+      delete: {},
+      get: {},
+      head: {},
+      post: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      put: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      patch: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      }
+    }
+➤ │ API Request: Params undefined
+➤ │ API Request: Data undefined
+➤ │ API Response 200 OK
+➤ │ API Response: Status 200
+➤ │ API Response: Headers {
+      date: 'Thu, 03 Nov 2022 05:48:39 GMT',
+      'content-type': 'application/json',
+      'content-length': '70',
+      connection: 'close',
+      server: 'nginx',
+      'access-control-allow-origin': 'https://gexproservices.bridge.smartsheet.com'
+    }
+➤ │ API Response: Data {
+      pluginDataService: {
+        domain: 'plugindata.converse.ai',
+        port: '443'
+      }
+    }
+➤ │ Platform plugindata.converse.ai:443
+➤ └ Completed in 0.42s
+➤ ┌ Bundling extension
+➤ │ deployService: include **/**
+➤ │ deployService: exclude [
+      '**/.*',
+      '**/*.log',
+      '**/*.{spec,test}.{js,ts}',
+      'src/**',
+      'node_modules/**',
+      '{test,tests,mock,mocks,__test__,__tests__,__mock__,__mocks__}/**'
+    ]
+➤ │ deployService: {
+      name: 'README.md',
+      sourcePath: '/Users/tfry/GitLab/bridgeExtensions/ADP/README.md',
+      type: 'file',
+      sourceType: 'stream',
+      date: 2021-03-31T05:25:50.000Z,
+      mode: 390,
+      prefix: null,
+      stats: Stats {
+        dev: 16777234,
+        mode: 33158,
+        nlink: 1,
+        uid: 503,
+        gid: 20,
+        rdev: 0,
+        blksize: 4096,
+        ino: 6190227,
+        size: 1400,
+        blocks: 8,
+        atimeMs: 1651271910915.6191,
+        mtimeMs: 1617168350000,
+        ctimeMs: 1651261622097.3442,
+        birthtimeMs: 1617167774000,
+        atime: 2022-04-29T22:38:30.916Z,
+        mtime: 2021-03-31T05:25:50.000Z,
+        ctime: 2022-04-29T19:47:02.097Z,
+        birthtime: 2021-03-31T05:16:14.000Z
+      },
+      linkname: null,
+      store: false,
+      comment: ''
+    }
+➤ │ deployService: {
+      name: 'advanced_expression.js',
+      sourcePath: '/Users/tfry/GitLab/bridgeExtensions/ADP/advanced_expression.js',
+      type: 'file',
+      sourceType: 'stream',
+      date: 2021-03-31T06:13:00.000Z,
+      mode: 390,
+      prefix: null,
+      stats: Stats {
+        dev: 16777234,
+        mode: 33158,
+        nlink: 1,
+        uid: 503,
+        gid: 20,
+        rdev: 0,
+        blksize: 4096,
+        ino: 6184487,
+        size: 6871,
+        blocks: 16,
+        atimeMs: 1651268913947.4873,
+        mtimeMs: 1617171180000,
+        ctimeMs: 1651261618990.37,
+        birthtimeMs: 1615844239000,
+        atime: 2022-04-29T21:48:33.947Z,
+        mtime: 2021-03-31T06:13:00.000Z,
+        ctime: 2022-04-29T19:46:58.990Z,
+        birthtime: 2021-03-15T21:37:19.000Z
+      },
+      linkname: null,
+      store: false,
+      comment: ''
+    }
+➤ │ deployService: {
+      name: 'extension.json',
+      sourcePath: '/Users/tfry/GitLab/bridgeExtensions/ADP/extension.json',
+      type: 'file',
+      sourceType: 'stream',
+      date: 2022-11-03T05:48:16.676Z,
+      mode: 390,
+      prefix: null,
+      stats: Stats {
+        dev: 16777234,
+        mode: 33158,
+        nlink: 1,
+        uid: 503,
+        gid: 20,
+        rdev: 0,
+        blksize: 4096,
+        ino: 6190225,
+        size: 1834,
+        blocks: 8,
+        atimeMs: 1667454496707.1724,
+        mtimeMs: 1667454496675.6746,
+        ctimeMs: 1667454496675.6746,
+        birthtimeMs: 1615842985000,
+        atime: 2022-11-03T05:48:16.707Z,
+        mtime: 2022-11-03T05:48:16.676Z,
+        ctime: 2022-11-03T05:48:16.676Z,
+        birthtime: 2021-03-15T21:16:25.000Z
+      },
+      linkname: null,
+      store: false,
+      comment: ''
+    }
+➤ │ deployService: {
+      name: 'package.json',
+      sourcePath: '/Users/tfry/GitLab/bridgeExtensions/ADP/package.json',
+      type: 'file',
+      sourceType: 'stream',
+      date: 2022-11-03T05:12:22.364Z,
+      mode: 390,
+      prefix: null,
+      stats: Stats {
+        dev: 16777234,
+        mode: 33158,
+        nlink: 1,
+        uid: 503,
+        gid: 20,
+        rdev: 0,
+        blksize: 4096,
+        ino: 6190221,
+        size: 1146,
+        blocks: 8,
+        atimeMs: 1667452342398.772,
+        mtimeMs: 1667452342364.0437,
+        ctimeMs: 1667452342364.0437,
+        birthtimeMs: 1615842985000,
+        atime: 2022-11-03T05:12:22.399Z,
+        mtime: 2022-11-03T05:12:22.364Z,
+        ctime: 2022-11-03T05:12:22.364Z,
+        birthtime: 2021-03-15T21:16:25.000Z
+      },
+      linkname: null,
+      store: false,
+      comment: ''
+    }
+➤ │ deployService: {
+      name: 'test.js',
+      sourcePath: '/Users/tfry/GitLab/bridgeExtensions/ADP/test.js',
+      type: 'file',
+      sourceType: 'stream',
+      date: 2022-11-03T05:43:40.039Z,
+      mode: 420,
+      prefix: null,
+      stats: Stats {
+        dev: 16777234,
+        mode: 33188,
+        nlink: 1,
+        uid: 503,
+        gid: 20,
+        rdev: 0,
+        blksize: 4096,
+        ino: 52699738,
+        size: 169,
+        blocks: 8,
+        atimeMs: 1667454222117.4124,
+        mtimeMs: 1667454220038.821,
+        ctimeMs: 1667454220038.821,
+        birthtimeMs: 1667454126599.892,
+        atime: 2022-11-03T05:43:42.117Z,
+        mtime: 2022-11-03T05:43:40.039Z,
+        ctime: 2022-11-03T05:43:40.039Z,
+        birthtime: 2022-11-03T05:42:06.600Z
+      },
+      linkname: null,
+      store: false,
+      comment: ''
+    }
+➤ │ deployService: {
+      name: 'tsconfig.json',
+      sourcePath: '/Users/tfry/GitLab/bridgeExtensions/ADP/tsconfig.json',
+      type: 'file',
+      sourceType: 'stream',
+      date: 2022-11-03T03:59:14.925Z,
+      mode: 420,
+      prefix: null,
+      stats: Stats {
+        dev: 16777234,
+        mode: 33188,
+        nlink: 1,
+        uid: 503,
+        gid: 20,
+        rdev: 0,
+        blksize: 4096,
+        ino: 52647767,
+        size: 508,
+        blocks: 8,
+        atimeMs: 1667452161541.2634,
+        mtimeMs: 1667447954924.716,
+        ctimeMs: 1667447954924.716,
+        birthtimeMs: 1667447943959.3677,
+        atime: 2022-11-03T05:09:21.541Z,
+        mtime: 2022-11-03T03:59:14.925Z,
+        ctime: 2022-11-03T03:59:14.925Z,
+        birthtime: 2022-11-03T03:59:03.959Z
+      },
+      linkname: null,
+      store: false,
+      comment: ''
+    }
+➤ │ deployService: {
+      name: 'lib/index.js',
+      sourcePath: '/Users/tfry/GitLab/bridgeExtensions/ADP/lib/index.js',
+      type: 'file',
+      sourceType: 'stream',
+      date: 2022-11-03T05:48:39.165Z,
+      mode: 420,
+      prefix: null,
+      stats: Stats {
+        dev: 16777234,
+        mode: 33188,
+        nlink: 1,
+        uid: 503,
+        gid: 20,
+        rdev: 0,
+        blksize: 4096,
+        ino: 52700797,
+        size: 365,
+        blocks: 8,
+        atimeMs: 1667454519177.309,
+        mtimeMs: 1667454519164.918,
+        ctimeMs: 1667454519164.918,
+        birthtimeMs: 1667454519164.7993,
+        atime: 2022-11-03T05:48:39.177Z,
+        mtime: 2022-11-03T05:48:39.165Z,
+        ctime: 2022-11-03T05:48:39.165Z,
+        birthtime: 2022-11-03T05:48:39.165Z
+      },
+      linkname: null,
+      store: false,
+      comment: ''
+    }
+➤ │ deployService: {
+      name: 'lib/settings.js',
+      sourcePath: '/Users/tfry/GitLab/bridgeExtensions/ADP/lib/settings.js',
+      type: 'file',
+      sourceType: 'stream',
+      date: 2022-11-03T05:48:39.209Z,
+      mode: 420,
+      prefix: null,
+      stats: Stats {
+        dev: 16777234,
+        mode: 33188,
+        nlink: 1,
+        uid: 503,
+        gid: 20,
+        rdev: 0,
+        blksize: 4096,
+        ino: 52700802,
+        size: 79,
+        blocks: 8,
+        atimeMs: 1667454519380.883,
+        mtimeMs: 1667454519209.3816,
+        ctimeMs: 1667454519209.3816,
+        birthtimeMs: 1667454519209.3123,
+        atime: 2022-11-03T05:48:39.381Z,
+        mtime: 2022-11-03T05:48:39.209Z,
+        ctime: 2022-11-03T05:48:39.209Z,
+        birthtime: 2022-11-03T05:48:39.209Z
+      },
+      linkname: null,
+      store: false,
+      comment: ''
+    }
+➤ │ deployService: {
+      name: 'lib/modules/getWorkers.js',
+      sourcePath: '/Users/tfry/GitLab/bridgeExtensions/ADP/lib/modules/getWorkers.js',
+      type: 'file',
+      sourceType: 'stream',
+      date: 2022-11-03T05:48:39.206Z,
+      mode: 420,
+      prefix: null,
+      stats: Stats {
+        dev: 16777234,
+        mode: 33188,
+        nlink: 1,
+        uid: 503,
+        gid: 20,
+        rdev: 0,
+        blksize: 4096,
+        ino: 52700801,
+        size: 3714,
+        blocks: 8,
+        atimeMs: 1667454519380.668,
+        mtimeMs: 1667454519205.7493,
+        ctimeMs: 1667454519205.7493,
+        birthtimeMs: 1667454519205.685,
+        atime: 2022-11-03T05:48:39.381Z,
+        mtime: 2022-11-03T05:48:39.206Z,
+        ctime: 2022-11-03T05:48:39.206Z,
+        birthtime: 2022-11-03T05:48:39.206Z
+      },
+      linkname: null,
+      store: false,
+      comment: ''
+    }
+➤ │ deployService: {
+      name: 'lib/lib/adp.js',
+      sourcePath: '/Users/tfry/GitLab/bridgeExtensions/ADP/lib/lib/adp.js',
+      type: 'file',
+      sourceType: 'stream',
+      date: 2022-11-03T05:48:39.185Z,
+      mode: 420,
+      prefix: null,
+      stats: Stats {
+        dev: 16777234,
+        mode: 33188,
+        nlink: 1,
+        uid: 503,
+        gid: 20,
+        rdev: 0,
+        blksize: 4096,
+        ino: 52700799,
+        size: 2582,
+        blocks: 8,
+        atimeMs: 1667454519277.743,
+        mtimeMs: 1667454519185.2488,
+        ctimeMs: 1667454519185.2488,
+        birthtimeMs: 1667454519185.1787,
+        atime: 2022-11-03T05:48:39.278Z,
+        mtime: 2022-11-03T05:48:39.185Z,
+        ctime: 2022-11-03T05:48:39.185Z,
+        birthtime: 2022-11-03T05:48:39.185Z
+      },
+      linkname: null,
+      store: false,
+      comment: ''
+    }
+➤ │ checksum 80bde6715f77ec9ac618bab932cf45ae774e52a76cc8236e3eaecbfb8541143a
+➤ └ Completed in 0.3s
+➤ ┌ Uploading specification
+➤ │ App token not included
+➤ │ API Request https://gexproservices.bridge.smartsheet.com/api/plugins/remote
+➤ │ API Request: Headers {
+      common: {
+        Accept: 'application/json, text/plain, */*'
+      },
+      delete: {},
+      get: {},
+      head: {},
+      post: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      put: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      patch: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      }
+    }
+➤ │ API Request: Params undefined
+➤ │ API Request: Data {
+      name: 'adp',
+      displayName: 'ADP',
+      description: 'Integration with ADP API.',
+      category: '',
+      documentLink: '',
+      needsOAuth: true,
+      uiSpec: {
+        providerTabs: [
+          {
+            type: 'SETTINGS',
+            text: 'SETUP',
+            enable: 'hasAgreed || isRegistered',
+            params: [
+              'app'
+            ]
+          }
+        ]
+      },
+      providerData: [
+        {
+          param: 'app',
+          displayName: 'Connected App',
+          description: 'The details of the connected app to be used for authentication.',
+          type: 'PARAM',
+          optional: false,
+          valueParams: [
+            {
+              param: 'client_id',
+              displayName: 'Client Id',
+              description: 'The client id of the connected app',
+              type: 'STRING',
+              optional: false
+            },
+            {
+              param: 'client_secret',
+              displayName: 'Client Secret',
+              description: 'The client secret of the connected app',
+              type: 'PASSWORD',
+              optional: false
+            },
+            {
+              param: 'cert',
+              displayName: 'Cert',
+              description: 'The signed CSR from ADP. Often returned as a .PEM file.',
+              type: 'TEXT',
+              hideExpression: 'model.cert.value !== undefined',
+              optional: false
+            },
+            {
+              param: 'key',
+              displayName: 'Key',
+              description: 'The key file generated from the CSR process.',
+              type: 'TEXT',
+              hideExpression: 'model.key.value !== undefined',
+              optional: false
+            }
+          ]
+        }
+      ],
+      module: [
+        {
+          id: 'getWorkers',
+          name: 'Get Workers',
+          description: 'Get all workers in your ADP account.',
+          hasReturn: true,
+          param: []
+        }
+      ],
+      webhooks: [],
+      hasOAuth: true,
+      invoker: {
+        upload: true,
+        checksum: '80bde6715f77ec9ac618bab932cf45ae774e52a76cc8236e3eaecbfb8541143a'
+      },
+      appToken: 'APP_TOKEN'
+    }
+➤ │ API Response 200 OK
+➤ │ API Response: Status 200
+➤ │ API Response: Headers {
+      date: 'Thu, 03 Nov 2022 05:48:40 GMT',
+      'content-type': 'application/json',
+      'transfer-encoding': 'chunked',
+      connection: 'close',
+      server: 'nginx',
+      vary: 'Accept-Encoding',
+      'access-control-allow-origin': 'https://gexproservices.bridge.smartsheet.com'
+    }
+➤ │ API Response: Data {
+      plugin: {
+        objectUUID: '5D42A6AE-9454-4675-BFEC-08690218DD80',
+        createTime: 1616106200490007600,
+        lastUpdateTime: 1667454431725345300,
+        serviceOwner: '45F6BD16-F48E-4C5C-ACC4-79B9ED71165D',
+        keys: {},
+        orderBy: 0,
+        delete: 0,
+        name: 'gexproservices_adp',
+        status: 0,
+        codeBlock: '',
+        checksum: 'e58678ac2d11d8986b45f41bed3f0fe16059b86514f989875b0da7cdfd2888b9',
+        key: '7A63AC16AE144E2739FF8903D603F77DBEA2FCE2CF1281EBB2F4907AFF671DAC',
+        functions: [],
+        isSystem: false,
+        isPublic: false,
+        description: 'Integration with ADP API.',
+        category: 'User',
+        displayName: 'ADP v2',
+        providerRegData: [
+          {
+            param: 'app',
+            displayName: 'Connected App',
+            description: 'The details of the connected app to be used for authentication.',
+            type: 'PARAM',
+            optional: false,
+            value: [],
+            valueParams: [
+              {
+                param: 'client_id',
+                displayName: 'Client Id',
+                description: 'The client id of the connected app',
+                type: 'STRING',
+                optional: false,
+                value: [],
+                valueParams: [],
+                readOnly: false,
+                allowArray: false,
+                minItems: 0,
+                maxItems: 0,
+                hideExpression: ''
+              },
+              {
+                param: 'client_secret',
+                displayName: 'Client Secret',
+                description: 'The client secret of the connected app',
+                type: 'PASSWORD',
+                optional: false,
+                value: [],
+                valueParams: [],
+                readOnly: false,
+                allowArray: false,
+                minItems: 0,
+                maxItems: 0,
+                hideExpression: ''
+              },
+              {
+                param: 'cert',
+                displayName: 'Cert',
+                description: 'The signed CSR from ADP. Often returned as a .PEM file.',
+                type: 'TEXT',
+                optional: false,
+                value: [],
+                valueParams: [],
+                readOnly: false,
+                allowArray: false,
+                minItems: 0,
+                maxItems: 0,
+                hideExpression: 'model.cert.value !== undefined'
+              },
+              {
+                param: 'key',
+                displayName: 'Key',
+                description: 'The key file generated from the CSR process.',
+                type: 'TEXT',
+                optional: false,
+                value: [],
+                valueParams: [],
+                readOnly: false,
+                allowArray: false,
+                minItems: 0,
+                maxItems: 0,
+                hideExpression: 'model.key.value !== undefined'
+              }
+            ],
+            readOnly: false,
+            allowArray: false,
+            minItems: 0,
+            maxItems: 0,
+            hideExpression: ''
+          }
+        ],
+        logoName: '',
+        onPluginRegister: '',
+        onPluginUnregister: '',
+        charge: 0,
+        documentLink: '',
+        isChannel: false,
+        isDeprecated: false,
+        needsOAuth: true,
+        uiSpec: {
+          providerTabs: [
+            {
+              enable: 'hasAgreed || isRegistered',
+              params: [
+                'app'
+              ],
+              text: 'SETUP',
+              type: 'SETTINGS'
+            }
+          ]
+        },
+        features: {}
+      },
+      uploadRef: {
+        invoker: {
+          userUUID: '6B2F306F-34A8-4158-9B51-018F924CBE90',
+          email: 'taylor.fry@smartsheet.com',
+          firstName: 'Taylor',
+          lastName: 'Fry',
+          admin: true,
+          providerUUID: '45F6BD16-F48E-4C5C-ACC4-79B9ED71165D'
+        },
+        provider: {
+          providerUUID: '45F6BD16-F48E-4C5C-ACC4-79B9ED71165D',
+          workspaceUUID: '45F6BD16-F48E-4C5C-ACC4-79B9ED71165D',
+          providerDomain: 'gexproservices.bridge.smartsheet.com'
+        },
+        callTime: 1667454520,
+        msgid: '0084B468-19CF-4C6F-A40E-2FA67D1B7C38',
+        installUUID: '3E84166A-6249-4CB0-B988-1E7CEB3BF462',
+        pluginUUID: '5D42A6AE-9454-4675-BFEC-08690218DD80',
+        callToken: {
+          validUntil: 1667455120,
+          signature: 'ce1df4a84e15ae17494582e924e9cac11d1fca6835894f289691bdd9af4866e8'
+        },
+        revision: 'r1667454520'
+      }
+    }
+➤ │ deployService: caller {
+      invoker: {
+        userUUID: '6B2F306F-34A8-4158-9B51-018F924CBE90',
+        email: 'taylor.fry@smartsheet.com',
+        firstName: 'Taylor',
+        lastName: 'Fry',
+        admin: true,
+        providerUUID: '45F6BD16-F48E-4C5C-ACC4-79B9ED71165D'
+      },
+      provider: {
+        providerUUID: '45F6BD16-F48E-4C5C-ACC4-79B9ED71165D',
+        workspaceUUID: '45F6BD16-F48E-4C5C-ACC4-79B9ED71165D',
+        providerDomain: 'gexproservices.bridge.smartsheet.com'
+      },
+      callTime: 1667454520,
+      msgid: '0084B468-19CF-4C6F-A40E-2FA67D1B7C38',
+      installUUID: '3E84166A-6249-4CB0-B988-1E7CEB3BF462',
+      pluginUUID: '5D42A6AE-9454-4675-BFEC-08690218DD80',
+      callToken: {
+        validUntil: 1667455120,
+        signature: 'ce1df4a84e15ae17494582e924e9cac11d1fca6835894f289691bdd9af4866e8'
+      },
+      revision: 'r1667454520'
+    }
+➤ └ Completed in 0.54s
+➤ ┌ Creating connection
+➤ └ Completed in 0.2s
+➤ ┌ Uploading bundle
+➤ │ Install UUID 3E84166A-6249-4CB0-B988-1E7CEB3BF462
+➤ │ Revision ID r1667454520
+➤ │ UPLOAD CODE 8422 Bytes
+➤ │ deployService: UPLOAD CODE response {
+      runtimeVersion: '16.13.1'
+    }
+! │ Your development environment (Node.js v16.15.0) does not match Bridge by Smartsheet's production environment (Node.js v16.13.1)! This may lead to unexpected runtime errors. Please refer to our documentation for more info.
+➤ └ Completed in 22.35s
+➤ ┌ Activating revision
+➤ │ API Request https://gexproservices.bridge.smartsheet.com/api/plugins/remote/5D42A6AE-9454-4675-BFEC-08690218DD80?activate=r1667454520
+➤ │ API Request: Headers {
+      common: {
+        Accept: 'application/json, text/plain, */*'
+      },
+      delete: {},
+      get: {},
+      head: {},
+      post: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      put: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      patch: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      }
+    }
+➤ │ API Request: Params {
+      activate: 'r1667454520'
+    }
+➤ │ API Request: Data {}
+➤ │ API Response 200 OK
+➤ │ API Response: Status 200
+➤ │ API Response: Headers {
+      date: 'Thu, 03 Nov 2022 05:49:03 GMT',
+      'content-type': 'application/json',
+      'content-length': '4',
+      connection: 'close',
+      server: 'nginx',
+      'access-control-allow-origin': 'https://gexproservices.bridge.smartsheet.com'
+    }
+➤ │ API Response: Data true
+➤ └ Completed in 0.68s

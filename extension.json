@@ -60,7 +60,7 @@
   ],
   "module": [
     {
-      "id": "get_workers",
+      "id": "getWorkers",
       "name": "Get Workers",
       "description": "Get all workers in your ADP account.",
       "hasReturn": true,
