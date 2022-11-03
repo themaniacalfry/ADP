@@ -1,0 +1,26 @@
+{
+    "compilerOptions": {
+      "rootDir": "src",
+      "outDir": "lib",
+      "target": "ES2015",
+      "lib": [
+        "ES2015"
+      ],
+      "module": "CommonJS",
+      "moduleResolution": "node",
+      "esModuleInterop": true,
+      "noUnusedLocals": false,
+      "noImplicitAny": true
+    },
+    "include": [
+      "./src/**/*.tsx",
+      "./src/**/*.ts"
+    ],
+    "exclude": [
+      "lib",
+      "node_modules",
+      "**/__*__/**",
+      "./src/**/*.spec.tsx",
+      "./src/**/*.spec.ts"
+    ]
+  }

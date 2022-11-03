@@ -1,13 +1,19 @@
 // All external calls come from this file.
-const https = require('https');
-const axios = require('axios');
+import https from 'https';
+import axios from 'axios';
 
 // Retrieve Tokens from ADP.
-const auth = (data) => {
+export const auth = (
+    data: {
+        cert: string;
+        key: string;
+        client_id: string;
+        client_secret: string;
+    }) => {
     // Certificate object
     const certs = {
-        cert: new Buffer.from(data.cert),
-        key: new Buffer.from(data.key)
+        cert: Buffer.from(data.cert),
+        key: Buffer.from(data.key)
     }
 
     // Sets the Agent with the certificates.
@@ -17,23 +23,32 @@ const auth = (data) => {
 
     const options = {
         headers: {
-            Authorization: `Basic ${new Buffer.from(`${data.client_id}:${data.client_secret}`).toString('base64')}`
+            Authorization: `Basic ${Buffer.from(`${data.client_id}:${data.client_secret}`).toString('base64')}`
         }
     }
-        
+
     // Makes API call to ADP to return a token.
-    return adp.post('https://accounts.adp.com/auth/oauth/v2/token?grant_type=client_credentials', null, options).then(res => {
-        return res.data;
-    }).catch(err => {
-        return err;
-    });
+    return adp.post(
+        'https://accounts.adp.com/auth/oauth/v2/token?grant_type=client_credentials',
+        null,
+        options
+    ).then(res => res.data);
 }
 
-const getWorkers = (auth, data, skip) => {
+export const getWorkers = (
+    auth,
+    data: {
+        cert: string;
+        key: string;
+        client_id: string;
+        client_secret: string;
+    },
+    skip
+) => {
     // Certificate object
     const certs = {
-        cert: new Buffer.from(data.cert),
-        key: new Buffer.from(data.key)
+        cert: Buffer.from(data.cert),
+        key: Buffer.from(data.key)
     }
 
     // Sets the Agent with the certificates.
@@ -46,9 +61,9 @@ const getWorkers = (auth, data, skip) => {
 
     // Sets URL with Query Parameters.
     const url = new URL('https://accounts.adp.com/hr/v2/workers');
-        url.searchParams.append('$top', 100);
-        url.searchParams.append('$select', filters);
-        url.searchParams.append('count', true);
+    url.searchParams.append('$top', '100');
+    url.searchParams.append('$select', filters);
+    url.searchParams.append('count', 'true');
 
     // If skip is not null it will set the skip value.
     if (skip) {
@@ -60,19 +75,10 @@ const getWorkers = (auth, data, skip) => {
         url: url.href,
         headers: {
             'Content-Type': 'application/json',
-            Authorization: `Bearer ${auth.access_token}` 
+            Authorization: `Bearer ${auth.access_token}`
         }
     }
-    
-    // Makes API call to return workers. 
-    return adp(options).then(res => {
-        return res.data;
-    }).catch(err => {
-        return err;
-    });
-}
 
-module.exports = {
-    auth,
-    getWorkers
+    // Makes API call to return workers. 
+    return adp(options).then(res => res.data);
 }
