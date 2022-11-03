@@ -1,5 +1,5 @@
 {
-  "name": "adp_v2",
+  "name": "adp",
   "description": "Integration with ADP API.",
   "main": "lib/index.js",
   "private": true,
@@ -9,6 +9,7 @@
     "build": "tsc",
     "deploy": "extension-scripts deploy gexpro",
     "deploy:verbose": "extension-scripts deploy -l verbose",
+    "revoke": "extension-scripts revoke gexpro",
     "lint": "eslint . --ext .ts"
   },
   "dependencies": {

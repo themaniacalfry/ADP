@@ -78,7 +78,7 @@
 ➤ │ Building settings.ts
 ➤ │ buildService: Transforming settings /Users/tfry/GitLab/bridgeExtensions/ADP/src/settings.ts
 ➤ │ buildService: Writing settings /Users/tfry/GitLab/bridgeExtensions/ADP/lib/settings.js
-➤ └ Completed in 0.21s
+➤ └ Completed in 0.17s
 ➤ deployService: options {
     include: '**/**',
     exclude: [
@@ -117,7 +117,7 @@
 ➤ │ API Response 200 OK
 ➤ │ API Response: Status 200
 ➤ │ API Response: Headers {
-      date: 'Thu, 03 Nov 2022 05:08:46 GMT',
+      date: 'Thu, 03 Nov 2022 05:48:39 GMT',
       'content-type': 'application/json',
       'content-length': '70',
       connection: 'close',
@@ -131,7 +131,7 @@
       }
     }
 ➤ │ Platform plugindata.converse.ai:443
-➤ └ Completed in 0.50s
+➤ └ Completed in 0.42s
 ➤ ┌ Bundling extension
 ➤ │ deployService: include **/**
 ➤ │ deployService: exclude [
@@ -211,7 +211,7 @@
       sourcePath: '/Users/tfry/GitLab/bridgeExtensions/ADP/extension.json',
       type: 'file',
       sourceType: 'stream',
-      date: 2022-11-03T04:28:04.502Z,
+      date: 2022-11-03T05:48:16.676Z,
       mode: 390,
       prefix: null,
       stats: Stats {
@@ -223,48 +223,16 @@
         rdev: 0,
         blksize: 4096,
         ino: 6190225,
-        size: 1841,
+        size: 1834,
         blocks: 8,
-        atimeMs: 1667449684526.0935,
-        mtimeMs: 1667449684501.7297,
-        ctimeMs: 1667449684501.7297,
+        atimeMs: 1667454496707.1724,
+        mtimeMs: 1667454496675.6746,
+        ctimeMs: 1667454496675.6746,
         birthtimeMs: 1615842985000,
-        atime: 2022-11-03T04:28:04.526Z,
-        mtime: 2022-11-03T04:28:04.502Z,
-        ctime: 2022-11-03T04:28:04.502Z,
+        atime: 2022-11-03T05:48:16.707Z,
+        mtime: 2022-11-03T05:48:16.676Z,
+        ctime: 2022-11-03T05:48:16.676Z,
         birthtime: 2021-03-15T21:16:25.000Z
-      },
-      linkname: null,
-      store: false,
-      comment: ''
-    }
-➤ │ deployService: {
-      name: 'package-lock.json',
-      sourcePath: '/Users/tfry/GitLab/bridgeExtensions/ADP/package-lock.json',
-      type: 'file',
-      sourceType: 'stream',
-      date: 2022-11-03T04:02:55.811Z,
-      mode: 420,
-      prefix: null,
-      stats: Stats {
-        dev: 16777234,
-        mode: 33188,
-        nlink: 1,
-        uid: 503,
-        gid: 20,
-        rdev: 0,
-        blksize: 4096,
-        ino: 52647846,
-        size: 589550,
-        blocks: 1152,
-        atimeMs: 1667448175908.112,
-        mtimeMs: 1667448175810.7925,
-        ctimeMs: 1667448175810.7925,
-        birthtimeMs: 1667447970799.3347,
-        atime: 2022-11-03T04:02:55.908Z,
-        mtime: 2022-11-03T04:02:55.811Z,
-        ctime: 2022-11-03T04:02:55.811Z,
-        birthtime: 2022-11-03T03:59:30.799Z
       },
       linkname: null,
       store: false,
@@ -275,7 +243,7 @@
       sourcePath: '/Users/tfry/GitLab/bridgeExtensions/ADP/package.json',
       type: 'file',
       sourceType: 'stream',
-      date: 2022-11-03T04:27:39.026Z,
+      date: 2022-11-03T05:12:22.364Z,
       mode: 390,
       prefix: null,
       stats: Stats {
@@ -287,16 +255,48 @@
         rdev: 0,
         blksize: 4096,
         ino: 6190221,
-        size: 1100,
+        size: 1146,
         blocks: 8,
-        atimeMs: 1667449659055.9058,
-        mtimeMs: 1667449659026.0278,
-        ctimeMs: 1667449659026.0278,
+        atimeMs: 1667452342398.772,
+        mtimeMs: 1667452342364.0437,
+        ctimeMs: 1667452342364.0437,
         birthtimeMs: 1615842985000,
-        atime: 2022-11-03T04:27:39.056Z,
-        mtime: 2022-11-03T04:27:39.026Z,
-        ctime: 2022-11-03T04:27:39.026Z,
+        atime: 2022-11-03T05:12:22.399Z,
+        mtime: 2022-11-03T05:12:22.364Z,
+        ctime: 2022-11-03T05:12:22.364Z,
         birthtime: 2021-03-15T21:16:25.000Z
+      },
+      linkname: null,
+      store: false,
+      comment: ''
+    }
+➤ │ deployService: {
+      name: 'test.js',
+      sourcePath: '/Users/tfry/GitLab/bridgeExtensions/ADP/test.js',
+      type: 'file',
+      sourceType: 'stream',
+      date: 2022-11-03T05:43:40.039Z,
+      mode: 420,
+      prefix: null,
+      stats: Stats {
+        dev: 16777234,
+        mode: 33188,
+        nlink: 1,
+        uid: 503,
+        gid: 20,
+        rdev: 0,
+        blksize: 4096,
+        ino: 52699738,
+        size: 169,
+        blocks: 8,
+        atimeMs: 1667454222117.4124,
+        mtimeMs: 1667454220038.821,
+        ctimeMs: 1667454220038.821,
+        birthtimeMs: 1667454126599.892,
+        atime: 2022-11-03T05:43:42.117Z,
+        mtime: 2022-11-03T05:43:40.039Z,
+        ctime: 2022-11-03T05:43:40.039Z,
+        birthtime: 2022-11-03T05:42:06.600Z
       },
       linkname: null,
       store: false,
@@ -321,11 +321,11 @@
         ino: 52647767,
         size: 508,
         blocks: 8,
-        atimeMs: 1667447954966.979,
+        atimeMs: 1667452161541.2634,
         mtimeMs: 1667447954924.716,
         ctimeMs: 1667447954924.716,
         birthtimeMs: 1667447943959.3677,
-        atime: 2022-11-03T03:59:14.967Z,
+        atime: 2022-11-03T05:09:21.541Z,
         mtime: 2022-11-03T03:59:14.925Z,
         ctime: 2022-11-03T03:59:14.925Z,
         birthtime: 2022-11-03T03:59:03.959Z
@@ -339,7 +339,7 @@
       sourcePath: '/Users/tfry/GitLab/bridgeExtensions/ADP/lib/index.js',
       type: 'file',
       sourceType: 'stream',
-      date: 2022-11-03T05:08:45.875Z,
+      date: 2022-11-03T05:48:39.165Z,
       mode: 420,
       prefix: null,
       stats: Stats {
@@ -350,17 +350,17 @@
         gid: 20,
         rdev: 0,
         blksize: 4096,
-        ino: 52694067,
+        ino: 52700797,
         size: 365,
         blocks: 8,
-        atimeMs: 1667452125965.979,
-        mtimeMs: 1667452125874.9524,
-        ctimeMs: 1667452125874.9524,
-        birthtimeMs: 1667452125874.823,
-        atime: 2022-11-03T05:08:45.966Z,
-        mtime: 2022-11-03T05:08:45.875Z,
-        ctime: 2022-11-03T05:08:45.875Z,
-        birthtime: 2022-11-03T05:08:45.875Z
+        atimeMs: 1667454519177.309,
+        mtimeMs: 1667454519164.918,
+        ctimeMs: 1667454519164.918,
+        birthtimeMs: 1667454519164.7993,
+        atime: 2022-11-03T05:48:39.177Z,
+        mtime: 2022-11-03T05:48:39.165Z,
+        ctime: 2022-11-03T05:48:39.165Z,
+        birthtime: 2022-11-03T05:48:39.165Z
       },
       linkname: null,
       store: false,
@@ -371,7 +371,7 @@
       sourcePath: '/Users/tfry/GitLab/bridgeExtensions/ADP/lib/settings.js',
       type: 'file',
       sourceType: 'stream',
-      date: 2022-11-03T05:08:45.921Z,
+      date: 2022-11-03T05:48:39.209Z,
       mode: 420,
       prefix: null,
       stats: Stats {
@@ -382,49 +382,17 @@
         gid: 20,
         rdev: 0,
         blksize: 4096,
-        ino: 52694072,
+        ino: 52700802,
         size: 79,
         blocks: 8,
-        atimeMs: 1667452126376.0657,
-        mtimeMs: 1667452125921.1387,
-        ctimeMs: 1667452125921.1387,
-        birthtimeMs: 1667452125921.0786,
-        atime: 2022-11-03T05:08:46.376Z,
-        mtime: 2022-11-03T05:08:45.921Z,
-        ctime: 2022-11-03T05:08:45.921Z,
-        birthtime: 2022-11-03T05:08:45.921Z
-      },
-      linkname: null,
-      store: false,
-      comment: ''
-    }
-➤ │ deployService: {
-      name: 'lib/lib/adp.js',
-      sourcePath: '/Users/tfry/GitLab/bridgeExtensions/ADP/lib/lib/adp.js',
-      type: 'file',
-      sourceType: 'stream',
-      date: 2022-11-03T05:08:45.896Z,
-      mode: 420,
-      prefix: null,
-      stats: Stats {
-        dev: 16777234,
-        mode: 33188,
-        nlink: 1,
-        uid: 503,
-        gid: 20,
-        rdev: 0,
-        blksize: 4096,
-        ino: 52694069,
-        size: 2582,
-        blocks: 8,
-        atimeMs: 1667452125966.1943,
-        mtimeMs: 1667452125896.4746,
-        ctimeMs: 1667452125896.4746,
-        birthtimeMs: 1667452125896.414,
-        atime: 2022-11-03T05:08:45.966Z,
-        mtime: 2022-11-03T05:08:45.896Z,
-        ctime: 2022-11-03T05:08:45.896Z,
-        birthtime: 2022-11-03T05:08:45.896Z
+        atimeMs: 1667454519380.883,
+        mtimeMs: 1667454519209.3816,
+        ctimeMs: 1667454519209.3816,
+        birthtimeMs: 1667454519209.3123,
+        atime: 2022-11-03T05:48:39.381Z,
+        mtime: 2022-11-03T05:48:39.209Z,
+        ctime: 2022-11-03T05:48:39.209Z,
+        birthtime: 2022-11-03T05:48:39.209Z
       },
       linkname: null,
       store: false,
@@ -435,7 +403,7 @@
       sourcePath: '/Users/tfry/GitLab/bridgeExtensions/ADP/lib/modules/getWorkers.js',
       type: 'file',
       sourceType: 'stream',
-      date: 2022-11-03T05:08:45.917Z,
+      date: 2022-11-03T05:48:39.206Z,
       mode: 420,
       prefix: null,
       stats: Stats {
@@ -446,24 +414,56 @@
         gid: 20,
         rdev: 0,
         blksize: 4096,
-        ino: 52694071,
-        size: 3599,
+        ino: 52700801,
+        size: 3714,
         blocks: 8,
-        atimeMs: 1667452126375.806,
-        mtimeMs: 1667452125917.3633,
-        ctimeMs: 1667452125917.3633,
-        birthtimeMs: 1667452125917.2983,
-        atime: 2022-11-03T05:08:46.376Z,
-        mtime: 2022-11-03T05:08:45.917Z,
-        ctime: 2022-11-03T05:08:45.917Z,
-        birthtime: 2022-11-03T05:08:45.917Z
+        atimeMs: 1667454519380.668,
+        mtimeMs: 1667454519205.7493,
+        ctimeMs: 1667454519205.7493,
+        birthtimeMs: 1667454519205.685,
+        atime: 2022-11-03T05:48:39.381Z,
+        mtime: 2022-11-03T05:48:39.206Z,
+        ctime: 2022-11-03T05:48:39.206Z,
+        birthtime: 2022-11-03T05:48:39.206Z
       },
       linkname: null,
       store: false,
       comment: ''
     }
-➤ │ checksum e30b69b2fe78bcbff7e0fadf82185f310de797f3afcc744e556673305b43d1a6
-➤ └ Completed in 0.5s
+➤ │ deployService: {
+      name: 'lib/lib/adp.js',
+      sourcePath: '/Users/tfry/GitLab/bridgeExtensions/ADP/lib/lib/adp.js',
+      type: 'file',
+      sourceType: 'stream',
+      date: 2022-11-03T05:48:39.185Z,
+      mode: 420,
+      prefix: null,
+      stats: Stats {
+        dev: 16777234,
+        mode: 33188,
+        nlink: 1,
+        uid: 503,
+        gid: 20,
+        rdev: 0,
+        blksize: 4096,
+        ino: 52700799,
+        size: 2582,
+        blocks: 8,
+        atimeMs: 1667454519277.743,
+        mtimeMs: 1667454519185.2488,
+        ctimeMs: 1667454519185.2488,
+        birthtimeMs: 1667454519185.1787,
+        atime: 2022-11-03T05:48:39.278Z,
+        mtime: 2022-11-03T05:48:39.185Z,
+        ctime: 2022-11-03T05:48:39.185Z,
+        birthtime: 2022-11-03T05:48:39.185Z
+      },
+      linkname: null,
+      store: false,
+      comment: ''
+    }
+➤ │ checksum 80bde6715f77ec9ac618bab932cf45ae774e52a76cc8236e3eaecbfb8541143a
+➤ └ Completed in 0.3s
 ➤ ┌ Uploading specification
 ➤ │ App token not included
 ➤ │ API Request https://gexproservices.bridge.smartsheet.com/api/plugins/remote
@@ -486,8 +486,8 @@
     }
 ➤ │ API Request: Params undefined
 ➤ │ API Request: Data {
-      name: 'adp_v2',
-      displayName: 'ADP v2',
+      name: 'adp',
+      displayName: 'ADP',
       description: 'Integration with ADP API.',
       category: '',
       documentLink: '',
@@ -547,7 +547,7 @@
       ],
       module: [
         {
-          id: 'get_workers',
+          id: 'getWorkers',
           name: 'Get Workers',
           description: 'Get all workers in your ADP account.',
           hasReturn: true,
@@ -558,14 +558,14 @@
       hasOAuth: true,
       invoker: {
         upload: true,
-        checksum: 'e30b69b2fe78bcbff7e0fadf82185f310de797f3afcc744e556673305b43d1a6'
+        checksum: '80bde6715f77ec9ac618bab932cf45ae774e52a76cc8236e3eaecbfb8541143a'
       },
       appToken: 'APP_TOKEN'
     }
 ➤ │ API Response 200 OK
 ➤ │ API Response: Status 200
 ➤ │ API Response: Headers {
-      date: 'Thu, 03 Nov 2022 05:08:46 GMT',
+      date: 'Thu, 03 Nov 2022 05:48:40 GMT',
       'content-type': 'application/json',
       'transfer-encoding': 'chunked',
       connection: 'close',
@@ -575,18 +575,18 @@
     }
 ➤ │ API Response: Data {
       plugin: {
-        objectUUID: '3E4FA905-7EB0-4DD3-91AA-88B015EA7079',
-        createTime: 1667449757329737700,
-        lastUpdateTime: 1667450857181421800,
+        objectUUID: '5D42A6AE-9454-4675-BFEC-08690218DD80',
+        createTime: 1616106200490007600,
+        lastUpdateTime: 1667454431725345300,
         serviceOwner: '45F6BD16-F48E-4C5C-ACC4-79B9ED71165D',
         keys: {},
         orderBy: 0,
         delete: 0,
-        name: 'gexproservices_adp_v2',
+        name: 'gexproservices_adp',
         status: 0,
         codeBlock: '',
-        checksum: 'a76e77510891609b074d2ca737469327d3d4499771dadb0b16c3f2ca526afa58',
-        key: '1589FC1972DC7FBC1331E7A0573FE7629D6A2D49F2789DE32A2E7A83379C1C37',
+        checksum: 'e58678ac2d11d8986b45f41bed3f0fe16059b86514f989875b0da7cdfd2888b9',
+        key: '7A63AC16AE144E2739FF8903D603F77DBEA2FCE2CF1281EBB2F4907AFF671DAC',
         functions: [],
         isSystem: false,
         isPublic: false,
@@ -686,8 +686,7 @@
             }
           ]
         },
-        features: {},
-        oAuthCallbackUrl: 'https://oauth.bridge.smartsheet.com/api/settings/oauth/oauth2callback'
+        features: {}
       },
       uploadRef: {
         invoker: {
@@ -703,15 +702,15 @@
           workspaceUUID: '45F6BD16-F48E-4C5C-ACC4-79B9ED71165D',
           providerDomain: 'gexproservices.bridge.smartsheet.com'
         },
-        callTime: 1667452126,
-        msgid: '4F62BD3F-3625-4AA4-8A21-8AC5944701D7',
-        installUUID: '503BC774-E02B-476F-B044-E1472569B9F6',
-        pluginUUID: '3E4FA905-7EB0-4DD3-91AA-88B015EA7079',
+        callTime: 1667454520,
+        msgid: '0084B468-19CF-4C6F-A40E-2FA67D1B7C38',
+        installUUID: '3E84166A-6249-4CB0-B988-1E7CEB3BF462',
+        pluginUUID: '5D42A6AE-9454-4675-BFEC-08690218DD80',
         callToken: {
-          validUntil: 1667452726,
-          signature: '155b5bc370e4de5ccac61ab7705c2064ca46c094dc8c637363aa4164b1b6d9b6'
+          validUntil: 1667455120,
+          signature: 'ce1df4a84e15ae17494582e924e9cac11d1fca6835894f289691bdd9af4866e8'
         },
-        revision: 'r1667452126'
+        revision: 'r1667454520'
       }
     }
 ➤ │ deployService: caller {
@@ -728,32 +727,30 @@
         workspaceUUID: '45F6BD16-F48E-4C5C-ACC4-79B9ED71165D',
         providerDomain: 'gexproservices.bridge.smartsheet.com'
       },
-      callTime: 1667452126,
-      msgid: '4F62BD3F-3625-4AA4-8A21-8AC5944701D7',
-      installUUID: '503BC774-E02B-476F-B044-E1472569B9F6',
-      pluginUUID: '3E4FA905-7EB0-4DD3-91AA-88B015EA7079',
+      callTime: 1667454520,
+      msgid: '0084B468-19CF-4C6F-A40E-2FA67D1B7C38',
+      installUUID: '3E84166A-6249-4CB0-B988-1E7CEB3BF462',
+      pluginUUID: '5D42A6AE-9454-4675-BFEC-08690218DD80',
       callToken: {
-        validUntil: 1667452726,
-        signature: '155b5bc370e4de5ccac61ab7705c2064ca46c094dc8c637363aa4164b1b6d9b6'
+        validUntil: 1667455120,
+        signature: 'ce1df4a84e15ae17494582e924e9cac11d1fca6835894f289691bdd9af4866e8'
       },
-      revision: 'r1667452126'
+      revision: 'r1667454520'
     }
-➤ └ Completed in 0.44s
+➤ └ Completed in 0.54s
 ➤ ┌ Creating connection
 ➤ └ Completed in 0.2s
 ➤ ┌ Uploading bundle
-➤ │ Install UUID 503BC774-E02B-476F-B044-E1472569B9F6
-➤ │ Revision ID r1667452126
-➤ │ UPLOAD CODE 65536 Bytes
-➤ │ UPLOAD CODE 65536 Bytes
-➤ │ UPLOAD CODE 23494 Bytes
+➤ │ Install UUID 3E84166A-6249-4CB0-B988-1E7CEB3BF462
+➤ │ Revision ID r1667454520
+➤ │ UPLOAD CODE 8422 Bytes
 ➤ │ deployService: UPLOAD CODE response {
       runtimeVersion: '16.13.1'
     }
 ! │ Your development environment (Node.js v16.15.0) does not match Bridge by Smartsheet's production environment (Node.js v16.13.1)! This may lead to unexpected runtime errors. Please refer to our documentation for more info.
-➤ └ Completed in 7.97s
+➤ └ Completed in 22.35s
 ➤ ┌ Activating revision
-➤ │ API Request https://gexproservices.bridge.smartsheet.com/api/plugins/remote/3E4FA905-7EB0-4DD3-91AA-88B015EA7079?activate=r1667452126
+➤ │ API Request https://gexproservices.bridge.smartsheet.com/api/plugins/remote/5D42A6AE-9454-4675-BFEC-08690218DD80?activate=r1667454520
 ➤ │ API Request: Headers {
       common: {
         Accept: 'application/json, text/plain, */*'
@@ -772,13 +769,13 @@
       }
     }
 ➤ │ API Request: Params {
-      activate: 'r1667452126'
+      activate: 'r1667454520'
     }
 ➤ │ API Request: Data {}
 ➤ │ API Response 200 OK
 ➤ │ API Response: Status 200
 ➤ │ API Response: Headers {
-      date: 'Thu, 03 Nov 2022 05:08:55 GMT',
+      date: 'Thu, 03 Nov 2022 05:49:03 GMT',
       'content-type': 'application/json',
       'content-length': '4',
       connection: 'close',
@@ -786,4 +783,4 @@
       'access-control-allow-origin': 'https://gexproservices.bridge.smartsheet.com'
     }
 ➤ │ API Response: Data true
-➤ └ Completed in 0.52s
+➤ └ Completed in 0.68s
